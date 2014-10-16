@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/data/jpa"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	
+	<!-- Scheduler para control de TTL de Procesos Batch en ejecucion -->
+	<beans:bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="false" destroy-method="destroy">
+		<beans:property name="autoStartup" value="true" />
+		<beans:property name="configLocation" value="classpath:META-INF/spring/quartz.properties"></beans:property>
+		<beans:property name="waitForJobsToCompleteOnShutdown" value="false"/>
+		<beans:property name="triggers">
+			<beans:list>
+				<beans:ref bean="helloWorld.trigger" />
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+	<!-- 
+		Proceso de Actualización 
+	-->
+	<beans:bean id="helloWorld.trigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<beans:property name="jobDetail" ref="helloWorld.job.detail" />
+		<beans:property name="cronExpression" value="${helloWorld.cronExpression:0 0/1 * * * ?}" />
+	</beans:bean>
+	
+	<beans:bean id="helloWorld.job.detail" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<beans:property name="jobClass" value="ar.org.crear.publicador.server.jobs.HelloWorldJob" />
+	</beans:bean>
+
+</beans:beans>

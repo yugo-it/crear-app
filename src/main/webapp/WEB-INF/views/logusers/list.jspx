@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ar_org_crear_publicador_common_model_security_LogUser" items="${logusers}" z="AKuC8w8SO7WtP/hPZDjjCGpao3o=">
+        <table:table data="${logusers}" id="l_ar_org_crear_publicador_common_model_security_LogUser" path="/logusers" z="54bVdt4zXx3HhfzgfVdVL6Tz3bw=">
+            <table:column id="c_ar_org_crear_publicador_common_model_security_LogUser_username" property="username" z="l3d2qotGIqMTzgjiAOih/9qVVmM="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_security_LogUser_password" property="password" z="ZT5dEzpHi+jhLmy7wugPAKmqnzA="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_security_LogUser_enabled" property="enabled" z="c5zeR8Zt+ou6Y5AOaFnsIIWV5CM="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_security_LogUser_roles" property="roles" z="3gf8Nys+mfquxMP6ZexhmRPJf6w="/>
+        </table:table>
+    </page:list>
+</div>

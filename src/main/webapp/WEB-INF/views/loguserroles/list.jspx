@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ar_org_crear_publicador_common_model_security_LogUserRole" items="${loguserroles}" z="9ZjNk0bDZ+PI/fjh7uNDvnBTkRQ=">
+        <table:table data="${loguserroles}" id="l_ar_org_crear_publicador_common_model_security_LogUserRole" path="/loguserroles" z="hAQkwBjcFDHvT3Cnm4fp0eqhwOk=">
+            <table:column id="c_ar_org_crear_publicador_common_model_security_LogUserRole_roleName" property="roleName" z="lBnxxs5tBwJq/JmbmrHjS/pw8e4="/>
+        </table:table>
+    </page:list>
+</div>

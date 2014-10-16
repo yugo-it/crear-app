@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ar_org_crear_publicador_common_model_Objetivo" object="${objetivo}" path="/objetivoes" z="iio962opJ2x7RSHtSp/GsmGEbww=">
+        <field:display field="minimo" id="s_ar_org_crear_publicador_common_model_Objetivo_minimo" object="${objetivo}" z="+s0Lm7FjIK4cexoaHVBSYnTozqI="/>
+        <field:display field="maximo" id="s_ar_org_crear_publicador_common_model_Objetivo_maximo" object="${objetivo}" z="K9N1UNlZB9MTgXtNcbvWKnB/BAs="/>
+        <field:display field="periodicidad" id="s_ar_org_crear_publicador_common_model_Objetivo_periodicidad" object="${objetivo}" z="pbZITJtZWfK3c18NuY+KZuOHjQw="/>
+        <field:display field="medioAlerta" id="s_ar_org_crear_publicador_common_model_Objetivo_medioAlerta" object="${objetivo}" z="pzfkonhcYUw+Sdl/35Cv71cmeS0="/>
+    </page:show>
+</div>

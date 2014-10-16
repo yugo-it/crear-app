@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ar_org_crear_publicador_common_model_Adjunto" items="${adjuntoes}" z="hs0tyiMYdY7PBviUHAi83qFTRPM=">
+        <table:table data="${adjuntoes}" id="l_ar_org_crear_publicador_common_model_Adjunto" path="/adjuntoes" z="euns2QJ1tFAVPIQN3iYqiryJ3Mo=">
+            <table:column id="c_ar_org_crear_publicador_common_model_Adjunto_tipo" property="tipo" z="ZkCR2eUBKycJVfBZw09n/7ln+RE="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Adjunto_tamanio" property="tamanio" z="aNL02pj3Uh1hUwtWsbwNgsoXne4="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Adjunto_descripcion" property="descripcion" z="irvQkNtgJXPPZUCLuTe1yI1JFso="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Adjunto_nombreArchivo" property="nombreArchivo" z="SQZBN6FsWvPsXk/EVDL6hMHSZMo="/>
+        </table:table>
+    </page:list>
+</div>

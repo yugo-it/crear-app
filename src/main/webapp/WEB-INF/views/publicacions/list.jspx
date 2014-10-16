@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ar_org_crear_publicador_common_model_Publicacion" items="${publicacions}" z="MUQpmggVmo3O1P/T/ANFF7je9O8=">
+        <table:table data="${publicacions}" id="l_ar_org_crear_publicador_common_model_Publicacion" path="/publicacions" z="CSZjDdhhpr0x/UwBMtxMbqLmW3Q=">
+            <table:column date="true" dateTimePattern="${publicacion_fecha_date_format}" id="c_ar_org_crear_publicador_common_model_Publicacion_fecha" property="fecha" z="KBr/0X5Mx3WK8tEPk0vPQl0pPQ8="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Publicacion_link" property="link" z="3O21fUiDSuPfJEdRoM78YkXoY2s="/>
+        </table:table>
+    </page:list>
+</div>

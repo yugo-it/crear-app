@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ar_org_crear_publicador_common_model_Adjunto" object="${adjunto}" path="/adjuntoes" z="M6xp7/V/7MZdB4sFPzhlkrvXhyE=">
+        <field:display field="tipo" id="s_ar_org_crear_publicador_common_model_Adjunto_tipo" object="${adjunto}" z="8POjQ/JmlXsCuyTFGFXb30EwBZ8="/>
+        <field:display field="tamanio" id="s_ar_org_crear_publicador_common_model_Adjunto_tamanio" object="${adjunto}" z="gO3DQ+bS0Knanr8YunvI8l25fuE="/>
+        <field:display field="descripcion" id="s_ar_org_crear_publicador_common_model_Adjunto_descripcion" object="${adjunto}" z="y6dl21aT8u64AM/v5Hc6ELTyJto="/>
+        <field:display field="nombreArchivo" id="s_ar_org_crear_publicador_common_model_Adjunto_nombreArchivo" object="${adjunto}" z="0hqrAVHpVvFsF1UjxWquQzUwVK0="/>
+    </page:show>
+</div>

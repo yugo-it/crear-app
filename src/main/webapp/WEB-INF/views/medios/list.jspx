@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ar_org_crear_publicador_common_model_Medio" items="${medios}" z="I+JNNbjKh4tA8sqp4gm8xlqeUyY=">
+        <table:table data="${medios}" id="l_ar_org_crear_publicador_common_model_Medio" path="/medios" z="X/KRvAXlWquaJ+8TNwgE/32h6l8=">
+            <table:column id="c_ar_org_crear_publicador_common_model_Medio_descripcion" property="descripcion" z="dXa/izi2MU1OD3e1Jt4aFQmrcEc="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Medio_tipo" property="tipo" z="Azf8WZjmOxMr72Iy5Tz0BoR2Mh4="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Medio_url" property="url" z="3zWb6DQXoDQ+bN6qhFaJl9oqapk="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,82 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-01 06:45:31
+project --topLevelPackage ar.org.crear.app
+jpa setup --provider HIBERNATE --database MYSQL --databaseName pre_crear_app --userName root --password 123456
+entity jpa --class ~.common.model.security.LogItem
+entity jpa --class ~.common.model.security.LogUser
+entity jpa --class ~.common.model.security.LogUserRole 
+entity jpa --class ~.common.model.Periodicidad --testAutomatically --table CREAR_PUBL_PERIODICIDAD --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Objetivo --testAutomatically --table CREAR_PUBL_OBJETIVO --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.MedioAlerta --testAutomatically --table CREAR_PUBL_MEDIO_ALERTA --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Tema --testAutomatically --table CREAR_PUBL_TEMA --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Publicacion --testAutomatically --table CREAR_PUBL_PUBLICACION --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Medio --testAutomatically --table CREAR_PUBL_MEDIO --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Notificacion --testAutomatically --table CREAR_PUBL_NOTIFICACION --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Area --testAutomatically --table CREAR_PUBL_AREA --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Destinatario --testAutomatically --table CREAR_PUBL_DESTINATARIO --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.TareaProgramada --testAutomatically --table CREAR_PUBL_TAREA_PROGRAMADA --identifierField id --identifierColumn id --identifierType java.lang.Long 
+entity jpa --class ~.common.model.Adjunto --testAutomatically --table CREAR_PUBL_ADJUNTO --identifierField id --identifierColumn id --identifierType java.lang.Long 
+field string --class ~.common.model.Periodicidad --fieldName descripcion
+field string --class ~.common.model.Medio --fieldName descripcion
+field string --class ~.common.model.MedioAlerta --fieldName descripcion
+field string --class ~.common.model.security.LogUserRole --fieldName roleName
+field string --class ~.common.model.security.LogUser --fieldName username
+field string --class ~.common.model.security.LogUser --fieldName password
+field boolean --class ~.common.model.security.LogUser --fieldName enabled --notNull true
+field set --class ~.common.model.security.LogUser --fieldName roles --type ~.common.model.security.LogUserRole
+field number --class ~.common.model.Objetivo --fieldName minimo --type java.lang.Integer
+field number --class ~.common.model.Objetivo --fieldName maximo --type java.lang.Integer
+field reference --class ~.common.model.Objetivo --fieldName periodicidad --type ~.common.model.Periodicidad --cardinality MANY_TO_ONE --notNull false
+field reference --class ~.common.model.Objetivo --fieldName medioAlerta --type ~.common.model.MedioAlerta --cardinality MANY_TO_ONE --notNull false
+field list --class ~.common.model.Objetivo --fieldName medios --type ~.common.model.Medio --cardinality ONE_TO_MANY --fetch LAZY
+field date --class ~.common.model.Publicacion --fieldName fecha --type java.util.Date 
+field string --class ~.common.model.Publicacion --fieldName link --sizeMax 500 --sizeMin 10 --notNull false 
+field list --class ~.common.model.Publicacion --fieldName temas --type ~.common.model.Tema --cardinality ONE_TO_MANY --fetch LAZY
+field list --class ~.common.model.Publicacion --fieldName notificaciones --type ~.common.model.Notificacion --cardinality ONE_TO_MANY --fetch LAZY
+field list --class ~.common.model.Publicacion --fieldName destinatarios --type ~.common.model.Destinatario --cardinality ONE_TO_MANY --fetch LAZY
+field list --class ~.common.model.Publicacion --fieldName medios --type ~.common.model.Medio --cardinality ONE_TO_MANY --fetch LAZY
+field string --class ~.common.model.Notificacion --fieldName descripcion --sizeMax 500 --sizeMin 10 --notNull false 
+field boolean --class ~.common.model.Notificacion --fieldName utilizado --notNull false 
+// [failed] field reference --class ~.common.model.Notificacion --fieldName adjuntos --type ~.common.model.Adjunto --cardinality ONE_TO_MANY --notNull false
+field string --class ~.common.model.Adjunto --fieldName tipo --sizeMax 20 --notNull false 
+field number --class ~.common.model.Adjunto --fieldName tamanio --type java.lang.Integer --notNull false 
+field string --class ~.common.model.Adjunto --fieldName descripcion --sizeMax 500 --sizeMin 10 --notNull false 
+field string --class ~.common.model.Adjunto --fieldName nombreArchivo --sizeMax 500 --sizeMin 10 --notNull false 
+field string --class ~.common.model.Medio --fieldName tipo --sizeMax 20 --notNull false 
+field string --class ~.common.model.Medio --fieldName url --sizeMax 500 --notNull false 
+repository jpa --interface ~.server.repository.PeriodicidadRepository --entity ~.common.model.Periodicidad
+repository jpa --interface ~.server.repository.ObjetivoRepository --entity ~.common.model.Objetivo
+repository jpa --interface ~.server.repository.MedioAlertaRepository --entity ~.common.model.MedioAlerta
+repository jpa --interface ~.server.repository.TemaRepository --entity ~.common.model.Tema
+// [failed] repository jpa --interface ~.server.repository.PublicacionRepository --entity ~.common.model.Publicacion
+repository jpa --interface ~.server.repository.MedioRepository --entity ~.common.model.Medio
+repository jpa --interface ~.server.repository.NotificacionRepository --entity ~.common.model.Notificacion
+repository jpa --interface ~.server.repository.AreaRepository --entity ~.common.model.Area
+repository jpa --interface ~.server.repository.DestinatarioRepository --entity ~.common.model.Destinatario
+repository jpa --interface ~.server.repository.AdjuntoRepository --entity ~.common.model.Adjunto
+repository jpa --interface ~.server.repository.TareaProgramadaRepository --entity ~.common.model.TareaProgramada
+service type --interface ~.server.service.PeriodicidadService --entity ~.common.model.Periodicidad
+service type --interface ~.server.service.ObjetivoService --entity ~.common.model.Objetivo
+service type --interface ~.server.service.MedioAlertaService --entity ~.common.model.MedioAlerta
+service type --interface ~.server.service.TemaService --entity ~.common.model.Tema
+service type --interface ~.server.service.PublicacionService --entity ~.common.model.Publicacion
+service type --interface ~.server.service.MedioService --entity ~.common.model.Medio
+service type --interface ~.server.service.NotificacionService --entity ~.common.model.Notificacion
+service type --interface ~.server.service.AreaService --entity ~.common.model.Area
+service type --interface ~.server.service.DestinatarioService --entity ~.common.model.Destinatario
+service type --interface ~.server.service.AdjuntoService --entity ~.common.model.Adjunto
+service type --interface ~.server.service.TareaProgramadaService --entity ~.common.model.TareaProgramada
+json all --deepSerialize
+web mvc setup
+web mvc json all --package ~.web
+web mvc all --package ~.web
+web mvc language --code es
+finder add --finderName findObjetivoByPeriodicidad --class ~.common.model.Objetivo
+finder add --finderName findObjetivoByMedioAlerta --class ~.common.model.Objetivo
+finder add --finderName findPublicacionByMedio --class ~.common.model.Publicacion
+finder add --finderName findPublicacionByTema --class ~.common.model.Publicacion
+web mvc finder all
+logging setup --level INFO
+perform eclipse
+security setup
+test integration 
+exit

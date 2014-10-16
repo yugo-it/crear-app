@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ar_org_crear_publicador_common_model_Objetivo" items="${objetivoes}" z="LV9dVG0XYPSbmLqOocLNJVLzPKc=">
+        <table:table data="${objetivoes}" id="l_ar_org_crear_publicador_common_model_Objetivo" path="/objetivoes" z="Qfj1UGJFXBis7R0eFd30X3FK0MY=">
+            <table:column id="c_ar_org_crear_publicador_common_model_Objetivo_minimo" property="minimo" z="ghZStnwdWG5yad2zGo14BRbHAgY="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Objetivo_maximo" property="maximo" z="CjanRxtmc67waLIpKvGe7ZzaskU="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Objetivo_periodicidad" property="periodicidad" z="pFopqZzAnu+GZkeNt1GoW68zulc="/>
+            <table:column id="c_ar_org_crear_publicador_common_model_Objetivo_medioAlerta" property="medioAlerta" z="ilwaW4Y1lbEqkFCIopNHjlRnZ5c="/>
+        </table:table>
+    </page:list>
+</div>
